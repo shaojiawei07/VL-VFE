@@ -29,7 +29,7 @@ parser.add_argument('--gamma', type=float, default=0.5, metavar='M',
                     help='Learning rate step gamma (default: 0.7)')
 parser.add_argument('--no-cuda', action='store_true', default=False,
                     help='disables CUDA training')
-parser.add_argument('--channel_noise', type=float, default=0.1)
+parser.add_argument('--channel_noise', type=float, default=0.3162)
 parser.add_argument('--intermediate_dim', type=int, default=64)
 parser.add_argument('--penalty', type=float, default=1e-3)
 parser.add_argument('--thr_ratio', type=float, default=1e-2)
