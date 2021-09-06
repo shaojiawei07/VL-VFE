@@ -1,6 +1,11 @@
 # VL-VFE
 This repository contains the codes for the variable-length variational feature encoding (VL-VFE) method proposed in the [paper](https://arxiv.org/pdf/2102.04170.pdf) "Learning Task-Oriented Communication for Edge Inference: An Information Bottleneck Method". (The VFE method proposed in this paper can be achieved by replacing the function $$\gamma$$ with a $$\mu$$ vector and fixing the channel noise level $$\sigma$$.) 
 
+$$
+\mu
+
+$$
+
 ## Dependencies
 ### Packages
 ```
