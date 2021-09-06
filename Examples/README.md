@@ -1,2 +1,2 @@
 
-![avatar](./mnist_dynamic_github_model1.eps)
+![avatar](./MNIST_Result1.png)
