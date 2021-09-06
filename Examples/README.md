@@ -4,6 +4,6 @@
 
 
 <div align="center">
-<img src="./MNIST_Result1.png" height="300px" alt="图片说明" >
-<img src="./MNIST_Result1.png" height="300px" alt="图片说明" >
+<img src="./MNIST_Result1.png" height="300px" alt="Model1" >
+<img src="./MNIST_Result1.png" height="300px" alt="Model2" >
 </div>
