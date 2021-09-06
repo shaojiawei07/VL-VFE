@@ -26,7 +26,7 @@ CIFAR-10
 ### Train the VL-VFE method on the CIFAR dataset
 `python VL_VFE_CIFAR.py --intermediate_dim 64  --beta 1e-2`
 
-The parameter `intermediate_dim` denotes the length of the encoded feature vector. The weighting factor `beta` and the threshold value `threshold` control the tradeoff between the accuracy and the number of activated dimensions. The number of activated dimensions is proportional to the communication overhead
+The parameter `intermediate_dim` denotes the length of the encoded feature vector. The weighting factor `beta` and the threshold value `threshold` control the tradeoff between the accuracy and the number of activated dimensions. The number of activated dimensions is proportional to the communication overhead.
 
 ## Inference
 After training the neural netowrk, we can test the performance under different channel conditions `--channel_noise`, which represents the standard deviation in the Gaussian distribution. The relationship between the `--channel_noise` and the peak signal-to-noise ratio (PSNR) is summarized as follows:
