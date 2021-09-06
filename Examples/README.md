@@ -1,4 +1,6 @@
+# Examples
 
+We provides 4 pretrained models as examples. 
 
 ## The number of activated dimensions and error rate as a function of the channel PSNR on the MNIST dataset.
 <div align="center">
