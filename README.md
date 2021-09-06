@@ -32,7 +32,7 @@ After training the neural netowrk, we can test the performance under different c
 
 `python3 VL_VFE_MNIST.py --test 1 --intermediate_dim 64 --channel_noise 0.1 --weights ./pretrained/model/location`
 
-Serveral pretrained models and results are saved in [Examples](https://arxiv.or).
+Serveral pretrained models and results are saved in [Examples](https://github.com/shaojiawei07/VL-VFE/tree/main/Examples).
 
 
 ## Citation
