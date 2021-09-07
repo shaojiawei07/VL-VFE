@@ -9,15 +9,11 @@ import torch.nn.init as init
 import copy
 
 parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
-parser.add_argument('--batch_size', type=int, default=128, metavar='N',
-                    help='input batch size for training (default: 64)')
-parser.add_argument('--test_batch_size', type=int, default=1000, metavar='N',
-                    help='input batch size for testing (default: 1000)')
+parser.add_argument('--batch_size', type=int, default=128)
+parser.add_argument('--test_batch_size', type=int, default=1000)
 parser.add_argument('--epochs', type=int, default=200)
-parser.add_argument('--lr', type=float, default=1e-3, metavar='LR',
-                    help='learning rate (default: 1.0)')
-parser.add_argument('--gamma', type=float, default=0.5, metavar='M',
-                    help='Learning rate step gamma (default: 0.7)')
+parser.add_argument('--lr', type=float, default=1e-3)
+parser.add_argument('--gamma', type=float, default=0.5)
 parser.add_argument('--channel_noise', type=float, default=0.3162)
 parser.add_argument('--intermediate_dim', type=int, default=64)
 parser.add_argument('--beta', type=float, default=1e-3)
