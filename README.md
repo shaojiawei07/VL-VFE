@@ -1,10 +1,5 @@
 # VL-VFE
-This repository contains the codes for the variable-length variational feature encoding (VL-VFE) method proposed in the [paper](https://arxiv.org/pdf/2102.04170.pdf) "Learning Task-Oriented Communication for Edge Inference: An Information Bottleneck Method". (The VFE method proposed in this paper can be achieved by replacing the function $$\gamma$$ with a $$\mu$$ vector and fixing the channel noise level $$\sigma$$.) 
-
-$$
-\mu
-
-$$
+This repository contains the codes for the variable-length variational feature encoding (VL-VFE) method proposed in the [paper](https://arxiv.org/pdf/2102.04170.pdf) "Learning Task-Oriented Communication for Edge Inference: An Information Bottleneck Method".
 
 ## Dependencies
 ### Packages
@@ -56,7 +51,10 @@ Serveral pretrained models and results are saved in [Examples](https://github.co
   year={2021}
 }
 ```
-## Known problem
+## Others
 
-* The loss may become `NaN` when training the network on the CIFAR dataset.
+* The variational feature encoding (VFE) proposed in this paper can be achieved by replacing the function `self.gamma_mu = gamma_function()` with a vector `self.mu = nn.Parameter(torch.ones(args.intermediate_dim))` and fixing the channel noise level in the training process.) 
+
+
+* Known problem: The loss may become `NaN` when training the network on the CIFAR dataset.
 
