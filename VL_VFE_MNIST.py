@@ -13,8 +13,7 @@ parser.add_argument('--batch_size', type=int, default=128, metavar='N',
                     help='input batch size for training (default: 64)')
 parser.add_argument('--test_batch_size', type=int, default=1000, metavar='N',
                     help='input batch size for testing (default: 1000)')
-parser.add_argument('--epochs', type=int, default=100, metavar='N',
-                    help='number of epochs to train (default: 14)')
+parser.add_argument('--epochs', type=int, default=200)
 parser.add_argument('--lr', type=float, default=1e-3, metavar='LR',
                     help='learning rate (default: 1.0)')
 parser.add_argument('--gamma', type=float, default=0.5, metavar='M',
@@ -221,13 +220,13 @@ def main_train():
         print('Test Accuracy:',accuracy/t, 'Pruned dim',pruned_number,'Activated dim:',args.intermediate_dim - pruned_number)
         accuracy = accuracy/t
 
-        if epoch > 60:
+        if epoch > 120:
             if (accuracy > test_acc and pruned_number == pruned_dim) or pruned_number > pruned_dim:
                 test_acc = accuracy
                 pruned_dim = pruned_number
                 saved_model = copy.deepcopy(model.state_dict())
-    print('Best Accuray:',accuracy,'pruned_number:',pruned_dim,'activated_dim:',args.intermediate_dim - pruned_dim)
-    torch.save({'model': saved_model}, './MNIST_model_dim:{}_beta:{}accuracy:{}_model1.pth'.format(args.intermediate_dim - pruned_dim,args.beta, test_acc))
+    print('Best Accuray:',test_acc,'pruned_number:',pruned_dim,'activated_dim:',args.intermediate_dim - pruned_dim)
+    torch.save({'model': saved_model}, './MNIST_model_dim:{}_beta:{}_accuracy:{:.4f}_model1.pth'.format(args.intermediate_dim - pruned_dim,args.beta, test_acc))
 
 def main_test():
     kwargs = {'num_workers': 1, 'pin_memory': True}
