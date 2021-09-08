@@ -6,7 +6,6 @@ This repository contains the codes for the variable-length variational feature e
 ```
 Pytorch 1.8.1
 Torchvision 0.9.1
-Numpy 1.19
 ```
 ### Datasets
 ```
