@@ -109,6 +109,7 @@ class Net(nn.Module):
                 channel_noise = torch.ones(1) * 0.3162
             else:
                 channel_noise = torch.rand(1)*0.27 + 0.05
+            #channel_noise = torch.rand(1)*0.27 + 0.05
         else:
             channel_noise = torch.FloatTensor([1]) * noise
         channel_noise = channel_noise.to(device)
@@ -182,15 +183,7 @@ def test(args, model, device, test_loader,noise = 0.2):
 
 def main_train():
     kwargs = {'num_workers': 1, 'pin_memory': True}
-    train_loader = torch.utils.data.DataLoader(
-        datasets.MNIST('./data', train=True, download=True,
-                       transform=transforms.Compose([
-                           transforms.ToTensor(),
-                           transforms.Normalize((0.1307,), (0.3081,))
-                       ])),
-        batch_size=args.batch_size, shuffle=True, **kwargs)
-    test_loader = torch.utils.data.DataLoader(
-        datasets.MNIST('./data', train=False, transform=transforms.Compose([
+    test_loader = torch.utils.data.DataLoader(datasets.MNIST('./data', train=False, transform=transforms.Compose([
                            transforms.ToTensor(),
                            transforms.Normalize((0.1307,), (0.3081,))
                        ])),
@@ -205,6 +198,14 @@ def main_train():
     saved_model = {}
 
     for epoch in range(1, args.epochs + 1):
+        if epoch % 10 == 1:
+            train_loader = torch.utils.data.DataLoader(
+                datasets.MNIST('./data', train=True, download=True,
+                               transform=transforms.Compose([
+                                   transforms.ToTensor(),
+                                   transforms.Normalize((0.1307,), (0.3081,))
+                               ])),
+                batch_size=args.batch_size, shuffle=True, **kwargs)
         print('\nepoch:',epoch)
         train(args, model, device, train_loader, optimizer, epoch)
         scheduler.step()
