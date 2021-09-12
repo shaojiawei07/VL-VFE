@@ -15,7 +15,7 @@ CIFAR-10
 
 ## How to run
 ### Train the VL-VFE method on the MNIST dataset
-`python VL_VFE_MNIST.py --intermediate_dim 64  --beta 7e-3 --threshold 1e-2`
+`python VL_VFE_MNIST.py --intermediate_dim 64  --beta 6e-3 --threshold 1e-2`
 
 ### Train the VL-VFE method on the CIFAR dataset
 `python VL_VFE_CIFAR.py --intermediate_dim 64  --beta 9e-3 --threshold 1e-2`
