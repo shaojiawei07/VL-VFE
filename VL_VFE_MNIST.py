@@ -11,7 +11,7 @@ import copy
 parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
 parser.add_argument('--batch_size', type=int, default=128)
 parser.add_argument('--test_batch_size', type=int, default=1000)
-parser.add_argument('--epochs', type=int, default=300)
+parser.add_argument('--epochs', type=int, default=400)
 parser.add_argument('--lr', type=float, default=1e-3)
 parser.add_argument('--gamma', type=float, default=0.5)
 parser.add_argument('--channel_noise', type=float, default=0.3162)
@@ -104,7 +104,8 @@ class Net(nn.Module):
 
         # Dynamic Channel Conditions
         if self.training:
-            b = torch.bernoulli(1/7.0*torch.ones(1))
+            #b = torch.bernoulli(1/7.0*torch.ones(1))
+            b = torch.bernoulli(1/5.0*torch.ones(1))
             if b > 0.5:
                 channel_noise = torch.ones(1) * 0.3162
             else:
@@ -217,7 +218,7 @@ def main_train():
         print('Test Accuracy:',accuracy/t, 'Pruned dim',pruned_number,'Activated dim:',args.intermediate_dim - pruned_number)
         accuracy = accuracy/t
 
-        if epoch > 120:
+        if epoch > 300:
             if (accuracy > test_acc and pruned_number == pruned_dim) or pruned_number > pruned_dim:
                 test_acc = accuracy
                 pruned_dim = pruned_number
