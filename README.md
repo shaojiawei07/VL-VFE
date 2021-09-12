@@ -23,7 +23,7 @@ CIFAR-10
 The parameter `intermediate_dim` denotes the (maximum) dimension of the encoded feature vector. The weighting factor `beta` and the pruning threshold `threshold` control the tradeoff between the accuracy and the number of activated dimensions.
 
 ## Inference
-After training the neural netowrk, we can test the performance under different channel conditions `--channel_noise`, which represents the standard deviation in the Gaussian distribution. The relationship between the `--channel_noise` and the peak signal-to-noise ratio (PSNR) is summarized as follows:
+After training the neural network, we can test the performance under different channel conditions `--channel_noise`, which represents the standard deviation in the Gaussian distribution. The relationship between the `--channel_noise` and the peak signal-to-noise ratio (PSNR) is summarized as follows:
 
 | `channel_noise` | 0.3162 |0.2371|0.1778|0.1334|0.1000|0.0750|0.0562|
 | :---: | :---: | :---: | :---: |:---: | :---: |:---: | :---: |
@@ -37,7 +37,7 @@ After training the neural netowrk, we can test the performance under different c
 
 `python3 VL_VFE_CIFAR.py --test 1 --intermediate_dim 64 --channel_noise 0.1 --threshold 1e-2 --weights ./pretrained/model/location`
 
-Serveral pretrained models and results are shown in [Examples](https://github.com/shaojiawei07/VL-VFE/tree/main/Examples).
+Several pretrained models and results are shown in [Examples](https://github.com/shaojiawei07/VL-VFE/tree/main/Examples).
 
 
 ## Citation
