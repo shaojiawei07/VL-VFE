@@ -43,12 +43,15 @@ Several pretrained models and results are shown in [Examples](https://github.com
 ## Citation
 
 ```
-@article{shao2021learning,
-  title={Learning Task-Oriented Communication for Edge Inference: An Information Bottleneck Approach},
-  author={Shao, Jiawei and Mao, Yuyi and Zhang, Jun},
-  journal={arXiv preprint arXiv:2102.04170},
-  year={2021}
-}
+@article{shao2021learning,  
+  author={Shao, Jiawei and Mao, Yuyi and Zhang, Jun},  
+  journal={IEEE Journal on Selected Areas in Communications},  
+  title={Learning Task-Oriented Communication for Edge Inference: An Information Bottleneck Approach},   
+  year={2022},  
+  volume={40},  
+  number={1},  
+  pages={197-211},  
+  doi={10.1109/JSAC.2021.3126087}}
 ```
 ## Others
 
