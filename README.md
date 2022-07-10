@@ -1,5 +1,5 @@
 # VL-VFE
-This repository contains the codes for the variable-length variational feature encoding (VL-VFE) method proposed in the [paper](https://arxiv.org/pdf/2102.04170.pdf) "Learning Task-Oriented Communication for Edge Inference: An Information Bottleneck Method".
+This repository contains the codes for the variable-length variational feature encoding (VL-VFE) method proposed in the [paper](https://arxiv.org/pdf/2102.04170.pdf) "Learning Task-Oriented Communication for Edge Inference: An Information Bottleneck Method", which is accepted to IEEE Journal on Selected Areas in Communications.
 
 ## Dependencies
 ### Packages
