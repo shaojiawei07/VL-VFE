@@ -57,6 +57,7 @@ Several pretrained models and results are shown in [Examples](https://github.com
 
 * The variational feature encoding (VFE) proposed in this paper can be achieved by replacing the function `self.gamma_mu = gamma_function()` with a vector `self.mu = nn.Parameter(torch.ones(args.intermediate_dim))` and fixing the channel noise level in the training process.
 
-
 * Known problem: The loss may become `NaN` when training the network on the CIFAR dataset.
+
+* (2023-Jan-19) I have corrected some typos and updated the paper on arxiv.
 
