@@ -59,5 +59,5 @@ Several pretrained models and results are shown in [Examples](https://github.com
 
 * Known problem: The loss may become `NaN` when training the network on the CIFAR dataset.
 
-* (2023-Jan-19) I have corrected some typos and updated the paper on arxiv.
+* (2023-Jan-19) I have corrected some typos and updated the paper on [arxiv](https://arxiv.org/pdf/2102.04170.pdf).
 
